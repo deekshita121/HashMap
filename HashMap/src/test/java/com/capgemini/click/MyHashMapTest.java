@@ -3,8 +3,13 @@ package com.capgemini.click;
 import org.junit.Test;
 import org.junit.Assert;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class MyHashMapTest {
 
+	private static final Logger log = LogManager.getLogger(MyLinkedList.class);
 	@Test
 	public void givenASentence_WhenWordsAreAddedToList_ShouldReturnWordFrequency() {
 		String sentence = "To be or not to be";
@@ -19,7 +24,7 @@ public class MyHashMapTest {
 			myHashMap.add(word, value);
 		}
 		int frequency = myHashMap.get("to");
-		System.out.println(myHashMap);
+		log.info(myHashMap);
 		Assert.assertEquals(2, frequency);
 	}
 }

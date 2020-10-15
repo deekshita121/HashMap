@@ -1,10 +1,10 @@
 package com.capgemini.click;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class MyLinkedList<K> {
-//	private static final Logger log = LogManager.getLogger(MyLinkedList.class);
+	private static final Logger log = LogManager.getLogger(MyLinkedList.class);
 	public INode head;
 	public INode tail;
 
@@ -54,7 +54,7 @@ public class MyLinkedList<K> {
 	}
 
 	public void printMyNodes() {
-		System.out.println("My Nodes: " + head);
+		log.info("My Nodes: " + head);
 	}
 
 	public String toString() {
