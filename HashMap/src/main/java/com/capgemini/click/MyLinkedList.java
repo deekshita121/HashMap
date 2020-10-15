@@ -53,6 +53,25 @@ public class MyLinkedList<K> {
 		return null;
 	}
 
+	public INode searchDelete(K key) {
+		INode temp = null;
+		INode prev = null;
+		INode current = head;
+		if (current != null && current.getKey().equals(key)) {
+			head = current.getNext();
+			temp = current;
+		}
+		while (current != null && !current.getKey().equals(key)) {
+			prev = current;
+			current = current.getNext();
+		}
+		if (current != null) {
+			prev.setNext(current.getNext());
+			temp = current;
+		}
+		return temp;
+	}
+
 	public void printMyNodes() {
 		log.info("My Nodes: " + head);
 	}

@@ -28,4 +28,3 @@ public class MyHashMap<K, V> {
 		return "MyHashMapNodes{" + myLinkedList + '}';
 	}
 }
-
